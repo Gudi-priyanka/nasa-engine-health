@@ -1,0 +1,18 @@
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.2
+matplotlib==3.9.2
+xgboost==2.1.1
+jupyterlab==4.2.5
+
+📌 Why these packages:
+
+pandas / numpy → Data loading & preprocessing
+
+scikit-learn → Feature scaling, train-test split, Random Forest, metrics
+
+matplotlib → Feature importance & performance visualization
+
+xgboost → In case you switch between Random Forest and XGBoost
+
+jupyterlab → To run the .ipynb notebook smoothly
