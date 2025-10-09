@@ -1,0 +1,87 @@
+🚀 Project: Remaining Useful Life (RUL) Prediction for Jet Engines
+🧩 Problem Statement
+
+Aircraft engines are complex systems that undergo wear and tear during every flight cycle. Unexpected engine failures can lead to costly repairs, flight delays, and potential safety risks. Traditionally, maintenance is scheduled at fixed intervals (time-based maintenance), which can either cause unnecessary maintenance or late detection of failures.
+
+To overcome this, airlines and maintenance teams need a predictive maintenance system that can forecast how much life is left in each engine — known as the Remaining Useful Life (RUL).
+By predicting RUL, maintenance can be planned proactively, improving safety and reducing costs.
+
+💡 Solution Overview
+
+In this project, we built a machine learning model that predicts the Remaining Useful Life (RUL) of aircraft engines using NASA’s C-MAPSS dataset.
+
+Steps Followed:
+
+Data Preprocessing:
+
+Loaded and cleaned the FD002 engine dataset.
+
+Assigned meaningful column names for settings and sensor readings.
+
+Calculated RUL = max(cycle) - current(cycle) for each engine.
+
+Removed outliers using the IQR method.
+
+Generated rolling mean, rolling standard deviation, and lag features to capture engine performance trends.
+
+Scaled the data using StandardScaler for better model performance.
+
+Model Building:
+We trained and compared three regression models:
+
+Linear Regression
+
+Random Forest Regressor
+
+XGBoost Regressor
+
+Model Evaluation:
+
+Metrics used: Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² Score
+
+XGBoost gave the best performance among all three models.
+
+📊 Business Inference
+
+The model predicts the Remaining Useful Life (RUL) for each engine — i.e., how many more flight cycles an engine can safely operate before maintenance is required.
+These predictions help the business make data-driven maintenance decisions.
+
+Key Business Benefits:
+
+Predictive Maintenance:
+Schedule engine maintenance before a failure occurs, reducing downtime.
+
+Cost Reduction:
+Avoid unnecessary maintenance and minimize expensive emergency repairs.
+
+Operational Efficiency:
+Improve flight scheduling and ensure engines are available when needed.
+
+Enhanced Safety:
+Detect potential engine issues early, ensuring passenger and crew safety.
+
+Data-Driven Decisions:
+Shift from time-based maintenance to condition-based maintenance, guided by model insights.
+
+🧠 Simple Example of RUL Calculation
+
+If an engine’s maximum recorded cycle = 150 and the current cycle = 120, then:
+RUL = 150 - 120 = 30 cycles
+This means the engine can operate safely for 30 more cycles before maintenance is required.
+
+🛠️ Technologies Used
+
+Python
+
+Pandas, NumPy
+
+Scikit-learn
+
+XGBoost
+
+Matplotlib
+
+🏁 Summary
+
+This project demonstrates how machine learning can be applied in the aviation industry to improve maintenance planning, safety, and cost efficiency.
+By predicting the Remaining Useful Life of aircraft engines, airlines can take preventive actions, ensuring smoother and more reliable operations.
